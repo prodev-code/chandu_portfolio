@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Captcha Generator</title>
+        <style>
+            body {
+                background-color: rgb(20, 95, 138);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .main {
+                border: 1px solid;
+                width: 450px;
+                height: 300px;
+                border-radius: 10px;
+                background-color: white;
+                padding-top: 15px;
+                position: absolute;
+                top: 200px;
+            }
+            .title {
+                text-align: center;
+                font-size: 2.5rem;
+                margin: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: aquamarine;
+            }
+            .text {
+                border: 1px solid black;
+                width: 170px;
+                padding: 20px;
+                background-color: white;
+                font-size: 1.5rem;
+                margin-right: 40px;
+                border-radius: 10px;
+            }
+            .button input {
+                background-color: aqua;
+                color: white;
+                width: 100px;
+                height: 50px;
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                border-radius: 10px;
+                border-style: none;
+            }
+            .come {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+                margin-top: 35px;
+            }
+            .enter {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 35px;
+            }
+            .element input {
+                padding: 20px;
+                background-color: white;
+                font-size: bold;
+                color: black; 
+                border-radius: 10px;    
+            }
+            .btn input {
+                background-color: aqua;
+                color: white;
+                width: 100px;
+                height: 50px;
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                border-radius: 10px;
+                border-style: none;
+            }
+            .button :hover {
+                cursor: pointer;
+                background-color: black;
+            }
+            .btn input:hover {
+                cursor: pointer;
+                background-color: lightgreen;
+            }
+            .button div{
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="title">
+                Captcha Generator
+            </div>
+            <div class="come">
+                <div class="text">
+                    Captcha: <span></span>
+                </div> 
+                <div class="button">
+                    <input type="button" value="Resend" onclick="GenerateCaptcha">
+                </div>
+            </div>
+            <div class="enter">
+                <div class="element">
+                    <input type="text" name="captcha" id="captcha" placeholder="Enter Captcha Here">
+                </div>
+                <div class="btn">
+                    <input type="button" name="submit" id="submit" value="Submit" >
+                </div>
+            </div>
+        </div>
+        <script>
+            var GenerateCaptcha = (Resend) => {
+                var captchavalue = randomUppercase1() + randomNumber() + randomLowercase() + randomUppercase2() + randomLowercase2();
+                document.querySelector("span").innerHTML = captchavalue;
+                //var captchaText = GenerateCaptcha();
+                
+            }
+            var randomUppercase1 = () => {
+                var minRange = 65;
+                var maxRange = 90
+                var randomAlphabet = Math.round(Math.random() * (maxRange - minRange)  + minRange);
+                var char = (String.fromCharCode(randomAlphabet));
+                return char;
+            } 
+            var randomNumber = () => {
+                var randomNum = Math.round(Math.random() * 9);
+                return randomNum;
+            }
+            var randomLowercase = () => {
+                var minRange = 97;
+                var maxRange = 122;
+                var randomAlphabet = Math.round(Math.random() * (maxRange - minRange) + minRange);
+                var char = (String.fromCharCode(randomAlphabet));
+                return char;
+            }
+            var randomUppercase2 = () => {
+                var minRange = 65;
+                var maxRange = 90
+                var randomAlphabet = Math.round(Math.random() * (maxRange - minRange)  + minRange);
+                var char = (String.fromCharCode(randomAlphabet));
+                return char;
+            }
+            var randomLowercase2 = () => {
+                var minRange = 97;
+                var maxRange = 122;
+                var randomAlphabet = Math.round(Math.random() * (maxRange - minRange) + minRange);
+                var char = (String.fromCharCode(randomAlphabet));
+                return char;
+            }
+            GenerateCaptcha();
+        </script>
+    </body>
+</html>

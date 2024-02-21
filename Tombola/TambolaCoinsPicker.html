@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tambola Coins</title>
+        <style>
+            h3 {
+                text-align: center;
+                color: rgb(19, 10, 148);
+                font-size: 45px;
+            }
+            .container {
+                width: 500px;
+                margin: 50px auto;
+            }
+            .number {
+                border: 1px solid;
+                width: 14px;
+                font-weight: bold;
+                min-height: 10px;
+                padding: 10px;
+                margin: 4px;
+                border-radius: 10px;
+                display: inline-block;
+            }
+            .displaynumber {
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                position: relative;
+                top: 100px;
+                font-size: 150px;
+                text-align: center;
+                color: rgb(219, 151, 24);
+            }
+            .dice {
+                position: relative;
+                top: -60px;
+                right: -283px;
+            }
+            body {
+                background-color: aquamarine;
+            }
+            .image {
+                width: 80px;
+                height: 80px;
+                display: inline-block;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>TAMBOLA COINS PICKER</h3>
+        <div class="displaynumber"></div>
+        <div class="dice">
+            <img class="image" src="https://atlas-content-cdn.pixelsquid.com/stock-images/dice-B5mdRR0-600.jpg"  onclick="getrandomvalues()">
+        </div>
+        <div class="container">
+            <div class="number" id="1" style="background-color: green; text-decoration: line-through;">1</div>
+            <div class="number" id="2" style="background-color: green; text-decoration: line-through;">2</div>
+            <div class="number" id="3" style="background-color: green; text-decoration: line-through;">3</div>
+            <div class="number" id="4" style="background-color: green; text-decoration: line-through;">4</div>
+            <div class="number" id="5" style="background-color: green; text-decoration: line-through;">5</div>
+            <div class="number" id="6" style="background-color: green; text-decoration: line-through;">6</div>
+            <div class="number" id="7" style="background-color: green; text-decoration: line-through;">7</div>
+            <div class="number" id="8" style="background-color: green; text-decoration: line-through;">8</div>
+            <div class="number" id="9" style="background-color: green; text-decoration: line-through;">9</div>
+            <div class="number" id="10" style="background-color: green; text-decoration: line-through;">10</div>
+            <div class="number" id="11" style="background-color: green; text-decoration: line-through;">11</div>
+            <div class="number" id="12" style="background-color: green; text-decoration: line-through;">12</div>
+            <div class="number" id="13" style="background-color: green; text-decoration: line-through;">13</div>
+            <div class="number" id="14" style="background-color: green; text-decoration: line-through;">14</div>
+            <div class="number" id="15" style="background-color: green; text-decoration: line-through;">15</div>
+            <div class="number" id="16" style="background-color: green; text-decoration: line-through;">16</div>
+            <div class="number" id="17" style="background-color: green; text-decoration: line-through;">17</div>
+            <div class="number" id="18" style="background-color: green; text-decoration: line-through;">18</div>
+            <div class="number" id="19" style="background-color: green; text-decoration: line-through;">19</div>
+            <div class="number" id="20" style="background-color: green; text-decoration: line-through;">20</div>
+            <div class="number" id="21" style="background-color: green; text-decoration: line-through;">21</div>
+            <div class="number" id="22" style="background-color: green; text-decoration: line-through;">22</div>
+            <div class="number" id="23" style="background-color: green; text-decoration: line-through;">23</div>
+            <div class="number" id="24" style="background-color: green; text-decoration: line-through;">24</div>
+            <div class="number" id="25" style="background-color: green; text-decoration: line-through;">25</div>
+            <div class="number" id="26" style="background-color: green; text-decoration: line-through;">26</div>
+            <div class="number" id="27" style="background-color: green; text-decoration: line-through;">27</div>
+            <div class="number" id="28" style="background-color: green; text-decoration: line-through;">28</div>
+            <div class="number" id="29" style="background-color: green; text-decoration: line-through;">29</div>
+            <div class="number" id="30" style="background-color: green; text-decoration: line-through;">30</div>
+            <div class="number" id="31" style="background-color: green; text-decoration: line-through;">31</div>
+            <div class="number" id="32" style="background-color: green; text-decoration: line-through;">32</div>
+            <div class="number" id="33" style="background-color: green; text-decoration: line-through;">33</div>
+            <div class="number" id="34" style="background-color: green; text-decoration: line-through;">34</div>
+            <div class="number" id="35" style="background-color: green; text-decoration: line-through;">35</div>
+            <div class="number" id="36" style="background-color: green; text-decoration: line-through;">36</div>
+            <div class="number" id="37" style="background-color: green; text-decoration: line-through;">37</div>
+            <div class="number" id="38" style="background-color: green; text-decoration: line-through;">38</div>
+            <div class="number" id="39" style="background-color: green; text-decoration: line-through;">39</div>
+            <div class="number" id="40" style="background-color: green; text-decoration: line-through;">40</div>
+            <div class="number" id="41" style="background-color: green; text-decoration: line-through;">41</div>
+            <div class="number" id="42" style="background-color: green; text-decoration: line-through;">42</div>
+            <div class="number" id="43" style="background-color: green; text-decoration: line-through;">43</div>
+            <div class="number" id="44" style="background-color: green; text-decoration: line-through;">44</div>
+            <div class="number" id="45" style="background-color: green; text-decoration: line-through;">45</div>
+            <div class="number" id="46" style="background-color: green; text-decoration: line-through;">46</div>
+            <div class="number" id="47" style="background-color: green; text-decoration: line-through;">47</div>
+            <div class="number" id="48" style="background-color: green; text-decoration: line-through;">48</div>
+            <div class="number" id="49" style="background-color: green; text-decoration: line-through;">49</div>
+            <div class="number" id="50" style="background-color: green; text-decoration: line-through;">50</div>
+            <div class="number" id="51" style="background-color: green; text-decoration: line-through;">51</div>
+            <div class="number" id="52" style="background-color: green; text-decoration: line-through;">52</div>
+            <div class="number" id="53" style="background-color: green; text-decoration: line-through;">53</div>
+            <div class="number" id="54" style="background-color: green; text-decoration: line-through;">54</div>
+            <div class="number" id="55" style="background-color: green; text-decoration: line-through;">55</div>
+            <div class="number" id="56" style="background-color: green; text-decoration: line-through;">56</div>
+            <div class="number" id="57" style="background-color: green; text-decoration: line-through;">57</div>
+            <div class="number" id="58" style="background-color: green; text-decoration: line-through;">58</div>
+            <div class="number" id="59" style="background-color: green; text-decoration: line-through;">59</div>
+            <div class="number" id="60" style="background-color: green; text-decoration: line-through;">60</div>
+            <div class="number" id="61" style="background-color: green; text-decoration: line-through;">61</div>
+            <div class="number" id="62" style="background-color: green; text-decoration: line-through;">62</div>
+            <div class="number" id="63" style="background-color: green; text-decoration: line-through;">63</div>
+            <div class="number" id="64" style="background-color: green; text-decoration: line-through;">64</div>
+            <div class="number" id="65" style="background-color: green; text-decoration: line-through;">65</div>
+            <div class="number" id="66" style="background-color: green; text-decoration: line-through;">66</div>
+            <div class="number" id="67" style="background-color: green; text-decoration: line-through;">67</div>
+            <div class="number" id="68" style="background-color: green; text-decoration: line-through;">68</div>
+            <div class="number" id="69" style="background-color: green; text-decoration: line-through;">69</div>
+            <div class="number" id="70" style="background-color: green; text-decoration: line-through;">70</div>
+            <div class="number" id="71" style="background-color: green; text-decoration: line-through;">71</div>
+            <div class="number" id="72" style="background-color: green; text-decoration: line-through;">72</div>
+            <div class="number" id="73" style="background-color: green; text-decoration: line-through;">73</div>
+            <div class="number" id="74" style="background-color: green; text-decoration: line-through;">74</div>
+            <div class="number" id="75" style="background-color: green; text-decoration: line-through;">75</div>
+            <div class="number" id="76" style="background-color: green; text-decoration: line-through;">76</div>
+            <div class="number" id="77" style="background-color: green; text-decoration: line-through;">77</div>
+            <div class="number" id="78" style="background-color: green; text-decoration: line-through;">78</div>
+            <div class="number" id="79" style="background-color: green; text-decoration: line-through;">79</div>
+            <div class="number" id="80" style="background-color: green; text-decoration: line-through;">80</div>
+            <div class="number" id="81" style="background-color: green; text-decoration: line-through;">81</div>
+            <div class="number" id="82" style="background-color: green; text-decoration: line-through;">82</div>
+            <div class="number" id="83" style="background-color: green; text-decoration: line-through;">83</div>
+            <div class="number" id="84" style="background-color: green; text-decoration: line-through;">84</div>
+            <div class="number" id="85" style="background-color: green; text-decoration: line-through;">85</div>
+            <div class="number" id="86" style="background-color: green; text-decoration: line-through;">86</div>
+            <div class="number" id="87" style="background-color: green; text-decoration: line-through;">87</div>
+            <div class="number" id="88" style="background-color: green; text-decoration: line-through;">88</div>
+            <div class="number" id="89" style="background-color: green; text-decoration: line-through;">89</div>
+            <div class="number" id="90" style="background-color: green; text-decoration: line-through;">90</div>
+        </div>
+        <script>
+             for (var i = 1; i <= 90; i++) {
+                var div = document.createElement("div");
+                div.setAttribute("class", "number");
+                div.setAttribute("id", i);
+                div.innerText = i;
+                document.querySelector(".container")//.append(div);
+            }
+            var generatedNumbers = [];
+            var getrandomvalues = () => {
+                var maxrange = 90;
+                do {
+                    randomnumber = Math.round(Math.random() * maxrange);
+                }while (generatedNumbers.includes(randomnumber));
+                
+                generatedNumbers.push(randomnumber);
+
+                document.querySelector(".displaynumber").innerText = randomnumber;
+                var spanToHighlight = document.getElementById(randomnumber);
+                spanToHighlight.style.backgroundColor = "blue";
+                spanToHighlight.style.textDecoration = "line-through";
+
+                if (generatedNumbers.length == 90) {
+                    alert("Game is Finished!");
+                }
+            }
+            getrandomvalues();
+        </script>
+    </body>
+</html>
